@@ -10,12 +10,12 @@ const fetchRandomQuote = async () => {
         if (!response.ok) throw new Error('Response not ok');
         const data = await response.json();
         const quote = data[0];
-        console.log(quote);
         return quote;
     } catch (error) {
         console.error('Error fetching random quote:', error);
         return { quote: '', author: '' };
     }
 };
+
 
 export default fetchRandomQuote;

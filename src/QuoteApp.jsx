@@ -1,5 +1,4 @@
-// QuoteApp.js
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Quote from './components/Quote';
 import fetchRandomQuote from './components/FetchRandomQuote';
 import './QuoteApp.css';
@@ -9,7 +8,10 @@ const QuoteApp = () => {
 
   const getQuote = async () => {
     const newQuoteData = await fetchRandomQuote();
-    setQuoteData({ quote: newQuoteData.quote, author: newQuoteData.author });
+    setQuoteData({
+      quote: newQuoteData.quote,
+      author: newQuoteData.author
+    });
   };
 
   return (
